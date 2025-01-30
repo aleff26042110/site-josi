@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josi Maria Nails</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;600&display=swap');
+
+        /* Fundo com um degradê rose gold */
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #fce4ec, #f8bbd0, #f48fb1);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            backdrop-filter: blur(6px);
+        }
+
+        /* Caixa com efeito vidro e tom rose */
+        .container {
+            background: rgba(255, 192, 203, 0.3); /* Rosa claro com transparência */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            border: 2px solid rgba(255, 182, 193, 0.5);
+            backdrop-filter: blur(12px);
+        }
+
+        .cliente-img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            border: 3px solid white;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #880e4f;
+            font-size: 24px;
+            margin-top: 10px;
+            text-shadow: 1px 1px 5px rgba(255, 105, 180, 0.5);
+        }
+
+        .botoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .botao {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            color: white;
+            transition: 0.3s;
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .botao img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .instagram { background: linear-gradient(90deg, #e1306c, #fd1d1d, #c13584); }
+        .whatsapp { background: #25d366; }
+        .pix { background: #009688; }
+        .localizacao { background: #ff9800; }
+        .contato { background: #673AB7; }
+        .facebook { background: #1877f2; }
+        .tiktok { background: #000000; }
+        .wifi { background: #4CAF50; }
+
+        .botao:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        /* Estilos para a galeria */
+        .galeria {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 192, 203, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .galeria h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: #880e4f;
+            margin-bottom: 15px;
+        }
+
+        .fotos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .fotos img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 3px solid white;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .fotos img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="img/IMG-20241216-WA0034.jpg" alt="Foto da Cliente" class="cliente-img">
+       
+        <h1>Josi Maria Nails</h1>
+        
+        <div class="botoes">
+            <a href="https://www.instagram.com/josimaria_naildesigner" class="botao instagram">
+                <img src="img/instagram.png" alt="Instagram"> Instagram
+            </a>
+            <a href="https://w.app/4mknkq" class="botao whatsapp">
+                <img src="img/whatsap.jpg" alt="WhatsApp"> WhatsApp
+            </a>
+            <a href="img/qrcode-pix.png" class="botao pix">
+                <img src="/img/pix.png" alt="Pix"> Pix
+            </a>
+            <a href="https://www.google.com.br/maps/dir//-22.9133804,-45.3638776/@-22.9133366,-45.3638454,21z?entry=ttu&g_ep=EgoyMDI1MDEyNi4wIKXMDSoASAFQAw%3D%3D" class="botao localizacao">
+                <img src="img/localizao.png" alt="Localização"> Localização
+            </a>
+            <a href="#" class="botao contato" id="salvarContato">
+                <img src="" alt="Contato"> Salvar Contato
+            </a>
+
+            </a>
+         
+            </a>
+           
+            </a>
+        </div>
+    </div>
+
+    <!-- GALERIA DE FOTOS -->
+    <div class="galeria">
+        <h2>💅 Unhas Lindas Feitas por Josi Maria Nails 💅</h2>
+        <div class="fotos">
+            <img src="img/unha 1.PNG" alt="Unha Decorada 1">
+            <img src="img/unha2.PNG" alt="Unha Decorada 2">
+            <img src="img/unha3.PNG" alt="Unha Decorada 3">
+            <img src="img/UNHA4.PNG" alt="Unha Decorada 4">
+            <img src="img/UNHA5.PNG" alt="Unha Decorada 5">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("wifiBtn").addEventListener("click", function() {
+            let qrCodeLink = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=WIFI:S:NomeDaRede;T:WPA;P:SenhaDaRede;;`;
+            window.open(qrCodeLink, "_blank");
+        });
+    </script>
+
+</body>
+</html>
