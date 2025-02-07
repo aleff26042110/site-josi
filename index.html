@@ -5,137 +5,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Josi Maria Nails</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
 
-        /* Fundo com um degradê rose gold */
         body {
             font-family: 'Poppins', sans-serif;
-            text-align: center;
-            background: linear-gradient(135deg, #fce4ec, #f8bbd0, #f48fb1);
+            background: linear-gradient(135deg, #fff0f5, #ffe4e1, #ffdae0);
             margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            padding: 20px;
             min-height: 100vh;
-            backdrop-filter: blur(6px);
+            position: relative;
+            overflow-x: hidden;
         }
 
-        /* Caixa com efeito vidro e tom rose */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZmZmZmZmM2UiLz48ZyBvcGFjaXR5PSIwLjEiPjxjaXJjbGUgY3g9IjE1IiBjeT0iMTUiIHI9IjEwIiBmaWxsPSIjZmY2Yjk5Ii8+PGNpcmNsZSBjeD0iMTUwIiBjeT0iMTUwIiByPSIxNSIgZmlsbD0iI2ZmODhiYSIvPjxjaXJjbGUgY3g9IjE4MCIgY3k9IjMwIiByPSI3IiBmaWxsPSIjZmY2Yjk5Ii8+PC9nPjwvc3ZnPg==');
+            z-index: -1;
+        }
+
         .container {
-            background: rgba(255, 192, 203, 0.3); /* Rosa claro com transparência */
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 400px;
-            border: 2px solid rgba(255, 182, 193, 0.5);
-            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 40px auto;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                rgba(255,182,193,0.1) 0%,
+                rgba(255,192,203,0.2) 50%,
+                rgba(255,182,193,0.1) 100%);
+            animation: shine 6s infinite;
+            z-index: -1;
         }
 
         .cliente-img {
-            width: 100%;
-            max-width: 200px;
-            border-radius: 15px;
-            margin-bottom: 15px;
-            border: 3px solid white;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin: -90px auto 20px;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            color: #880e4f;
-            font-size: 24px;
-            margin-top: 10px;
-            text-shadow: 1px 1px 5px rgba(255, 105, 180, 0.5);
+            color: #d6336c;
+            font-size: 2.2em;
+            margin: 0 0 25px;
+            text-shadow: 2px 2px 4px rgba(214, 51, 108, 0.1);
+            position: relative;
+        }
+
+        h1::after {
+            content: '✨';
+            position: absolute;
+            right: -30px;
+            top: -15px;
+            font-size: 1.2em;
+            animation: sparkle 2s infinite;
         }
 
         .botoes {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+            display: grid;
+            gap: 15px;
+            margin-top: 20px;
         }
 
         .botao {
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 12px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 25px;
+            padding: 16px 25px;
+            border-radius: 15px;
             color: white;
-            transition: 0.3s;
-            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .botao::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255,255,255,0.3),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        .botao:hover::before {
+            left: 100%;
         }
 
         .botao img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
+            width: 28px;
+            height: 28px;
+            margin-right: 12px;
+            filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
         }
 
-        .instagram { background: linear-gradient(90deg, #e1306c, #fd1d1d, #c13584); }
-        .whatsapp { background: #25d366; }
-        .pix { background: #009688; }
-        .localizacao { background: #ff9800; }
-        .contato { background: #673AB7; }
-        .facebook { background: #1877f2; }
-        .tiktok { background: #000000; }
-        .wifi { background: #4CAF50; }
+        .instagram { background: linear-gradient(45deg, #e1306c, #c13584, #fd1d1d); }
+        .whatsapp { background: linear-gradient(45deg, #25d366, #128c7e); }
+        .pix { background: linear-gradient(45deg, #009688, #32c5d2); }
+        .localizacao { background: linear-gradient(45deg, #ff9800, #ff5722); }
+        .contato { background: linear-gradient(45deg, #673ab7, #9c27b0); }
 
-        .botao:hover {
-            transform: scale(1.05);
-            opacity: 0.9;
-        }
-
-        /* Estilos para a galeria */
         .galeria {
-            text-align: center;
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(255, 192, 203, 0.2);
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            width: 90%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 30px;
+            margin: 30px auto;
             max-width: 800px;
-        }
-
-        .galeria h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 22px;
-            color: #880e4f;
-            margin-bottom: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .fotos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
         }
 
         .fotos img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
+            width: 100%;
+            height: 180px;
             border-radius: 15px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            cursor: pointer;
             border: 3px solid white;
-            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .fotos img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05) rotate(2deg);
+            z-index: 2;
+        }
+
+        @keyframes shine {
+            0% { transform: translate(-50%, -50%) rotate(45deg); }
+            100% { transform: translate(150%, 150%) rotate(45deg); }
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.9); }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+                margin: 20px auto;
+            }
+            
+            .cliente-img {
+                width: 140px;
+                height: 140px;
+                margin-top: -70px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <img src="img/IMG-20241216-WA0034.jpg" alt="Foto da Cliente" class="cliente-img">
-       
+        <img src="img/IMG-20241216-WA0034.jpg" alt="Josi Maria Nails" class="cliente-img">
         <h1>Josi Maria Nails</h1>
         
         <div class="botoes">
@@ -146,41 +212,27 @@
                 <img src="img/whatsap.jpg" alt="WhatsApp"> WhatsApp
             </a>
             <a href="img/qrcode-pix.png" class="botao pix">
-                <img src="/img/pix.png" alt="Pix"> Pix
+                <img src="img/pix.png" alt="Pix"> Pix
             </a>
-            <a href="https://www.google.com.br/maps/dir//-22.9133804,-45.3638776/@-22.9133366,-45.3638454,21z?entry=ttu&g_ep=EgoyMDI1MDEyNi4wIKXMDSoASAFQAw%3D%3D" class="botao localizacao">
+            <a href="https://maps.app.goo.gl/..." class="botao localizacao">
                 <img src="img/localizao.png" alt="Localização"> Localização
             </a>
             <a href="#" class="botao contato" id="salvarContato">
-                <img src="" alt="Contato"> Salvar Contato
-            </a>
-
-            </a>
-         
-            </a>
-           
+                <img src="img/contato.png" alt="Contato"> Salvar Contato
             </a>
         </div>
     </div>
 
-    <!-- GALERIA DE FOTOS -->
     <div class="galeria">
-        <h2>💅 Unhas Lindas Feitas por Josi Maria Nails 💅</h2>
+        <h2>💅 Nossos Trabalhos 💅</h2>
         <div class="fotos">
-            <img src="img/unha 1.PNG" alt="Unha Decorada 1">
-            <img src="img/unha2.PNG" alt="Unha Decorada 2">
-            <img src="img/unha3.PNG" alt="Unha Decorada 3">
-            <img src="img/UNHA4.PNG" alt="Unha Decorada 4">
-            <img src="img/UNHA5.PNG" alt="Unha Decorada 5">
+            <img src="img/unha1.PNG" alt="Design de Unhas">
+            <img src="img/unha2.PNG" alt="Arte em Gel">
+            <img src="img/unha3.PNG" alt="Decoração Premium">
+            <img src="img/unha4.PNG" alt="Unhas Artísticas">
+            <img src="img/unha5.PNG" alt="Design Especial">
         </div>
     </div>
-
-    <script>
-        document.getElementById("wifiBtn").addEventListener("click", function() {
-            let qrCodeLink = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=WIFI:S:NomeDaRede;T:WPA;P:SenhaDaRede;;`;
-            window.open(qrCodeLink, "_blank");
-        });
-    </script>
 
 </body>
 </html>
